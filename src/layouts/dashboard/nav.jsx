@@ -223,8 +223,6 @@ function NavItem({ item }) {
         )}
       </ListItemButton>
 
-      )
-
 NavItem.propTypes = {
   item: PropTypes.object,
 };
