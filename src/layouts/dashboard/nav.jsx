@@ -212,7 +212,7 @@ function NavItem({ item }) {
       </Box>
 
       <Box component="span">{item.title} </Box>
-
+      <Box component='span'>
        {item.subItems && (
           <IconButton
             sx={{
@@ -223,6 +223,7 @@ function NavItem({ item }) {
             {open ? <ExpandLessIcon /> :     <ExpandMoreIcon />}
           </IconButton>
         )}
+        </Box>
       </ListItemButton>
 
  {item.subItems && (
