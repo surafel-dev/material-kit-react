@@ -223,34 +223,7 @@ function NavItem({ item }) {
         )}
       </ListItemButton>
 
-      {item.subItems && (
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            {item.subItems.map((subItem) => (
-              <ListItem
-                key={subItem.title}
-                disablePadding
-                sx={{
-                  minHeight: 44,
-                  borderRadius: 0.75,
-                  typography: 'body2',
-                  color: 'text.secondary',
-                  textTransform: 'capitalize',
-                  fontWeight: 'fontWeightMedium',
-                  // ... (other styles for sub-items)
-                }}
-              >
-                <ListItemButton
-                  component={RouterLink}
-                  href={subItem.path}
-                  sx={{
-                    pl: 4,
-                  }}
-                >
-                  {subItem.title}
-    </ListItemButton>
-  );
-}
+      
 
 NavItem.propTypes = {
   item: PropTypes.object,
