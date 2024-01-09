@@ -186,6 +186,7 @@ function NavItem({ item }) {
 
   return (
     <ListItemButton
+      onClick={handleClick}
       component={RouterLink}
       href={item.path}
       sx={{
@@ -210,23 +211,43 @@ function NavItem({ item }) {
       </Box>
 
       <Box component="span">{item.title} </Box>
-      <Box  component="span">
-    <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary="Inbox" />
-        {open ? <ExpandLess /> : <ExpandMore />}
+      {item.subItems && (
+          <IconButton
+            sx={{
+              ml: 'auto',
+              color: 'text.secondary',
+            }}
+          >
+            {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          </IconButton>
+        )}
       </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred" />
-          </ListItemButton>
-        </Box>
+
+      {item.subItems && (
+        <Collapse in={open} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            {item.subItems.map((subItem) => (
+              <ListItem
+                key={subItem.title}
+                disablePadding
+                sx={{
+                  minHeight: 44,
+                  borderRadius: 0.75,
+                  typography: 'body2',
+                  color: 'text.secondary',
+                  textTransform: 'capitalize',
+                  fontWeight: 'fontWeightMedium',
+                  // ... (other styles for sub-items)
+                }}
+              >
+                <ListItemButton
+                  component={RouterLink}
+                  href={subItem.path}
+                  sx={{
+                    pl: 4,
+                  }}
+                >
+                  {subItem.title}
     </ListItemButton>
   );
 }
