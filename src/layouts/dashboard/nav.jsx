@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+hiimport { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
@@ -177,6 +177,12 @@ function NavItem({ item }) {
   const pathname = usePathname();
 
   const active = item.path === pathname;
+
+  const [open, setOpen] = useState(true);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
 
   return (
     <ListItemButton
