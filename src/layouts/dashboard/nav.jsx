@@ -211,16 +211,7 @@ function NavItem({ item }) {
       </Box>
 
       <Box component="span">{item.title} </Box>
-      {item.subItems && (
-          <IconButton
-            sx={{
-              ml: 'auto',
-              color: 'text.secondary',
-            }}
-          >
-            {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-          </IconButton>
-        )}
+     
       </ListItemButton>
 
 NavItem.propTypes = {
