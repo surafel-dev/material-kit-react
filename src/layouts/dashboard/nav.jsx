@@ -107,28 +107,28 @@ export default function Nav({ openNav, onCloseNav }) {
     </Box>
   );
 
-  const renderContent = (
-    <Scrollbar
-      sx={{
+const renderContent = (
+  <Scrollbar
+    sx={{
+      height: 1,
+      '& .simplebar-content': {
         height: 1,
-        '& .simplebar-content': {
-          height: 1,
-          display: 'flex',
-          flexDirection: 'column',
-        },
-      }}
-    >
-      <Logo sx={{ mt: 3, ml: 4 }} />
+        display: 'flex',
+        flexDirection: 'column',
+      },
+    }}
+  >
+    <Logo sx={{ mt: 3, ml: 4 }} />
 
-      {renderAccount}
+    {renderAccount}
 
-      {renderMenu}
+    {renderMenu}
 
-      <Box sx={{ flexGrow: 1 }} />
+    <Box sx={{ flexGrow: 1 }} />
 
-      {renderUpgrade}
-    </Scrollbar>
-  ));
+    {renderUpgrade}
+  </Scrollbar>
+);
 
   return (
     <Box
