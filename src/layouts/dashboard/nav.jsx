@@ -128,7 +128,7 @@ export default function Nav({ openNav, onCloseNav }) {
 
       {renderUpgrade}
     </Scrollbar>
-  );
+  ));
 
   return (
     <Box
