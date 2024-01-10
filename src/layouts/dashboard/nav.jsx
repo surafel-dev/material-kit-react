@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
@@ -8,17 +8,7 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import { alpha } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
 
 import { usePathname } from 'src/routes/hooks';
 import { RouterLink } from 'src/routes/components';
@@ -179,15 +169,8 @@ function NavItem({ item }) {
 
   const active = item.path === pathname;
 
-  const [open, setOpen] = useState(true);
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
-
   return (
     <ListItemButton
-      onClick={handleClick}
       component={RouterLink}
       href={item.path}
       sx={{
@@ -212,51 +195,9 @@ function NavItem({ item }) {
       </Box>
 
       <Box component="span">{item.title} </Box>
-      <Box component='span'>
-       {item.subItems && (
-          <IconButton
-            sx={{
-              ml: 'auto',
-              color: 'text.secondary',
-            }}
-          >
-            {open ? <ExpandLessIcon /> :     <ExpandMoreIcon />}
-          </IconButton>
-        )}
-        </Box>
-      </ListItemButton>
-
- {item.subItems && (
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            {item.subItems.map((subItem) => (
-              <ListItem
-                key={subItem.title}
-                disablePadding
-                sx={{
-                  minHeight: 44,
-                  borderRadius: 0.75,
-                  typography: 'body2',
-                  color: 'text.secondary',
-                  textTransform: 'capitalize',
-                  fontWeight: 'fontWeightMedium',
-                  // ... (other styles for sub-items)
-                }}
-              >
-                <ListItemButton
-                  component={RouterLink}
-                  href={subItem.path}
-                  sx={{
-                    pl: 4,
-                  }}
-                >
-                  {subItem.title}
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-        </Collapse>
-      )}
+    </ListItemButton>
+  );
+}
 
 NavItem.propTypes = {
   item: PropTypes.object,
