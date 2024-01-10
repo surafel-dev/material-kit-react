@@ -30,6 +30,11 @@ const navConfig = [
   {
    title: 'Nested list',
    icon: icon('ic_blog'),
+   subItems: [
+      {
+        title: 'List 1',
+        path: '/products',
+      },
   },
   {
     title: 'login',
