@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
@@ -9,14 +9,6 @@ import Avatar from '@mui/material/Avatar';
 import { alpha } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import ListItemButton from '@mui/material/ListItemButton';
-import IconButton from '@mui/material IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import Collapse from '@mui/material/Collapse';
-
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-
 
 import { usePathname } from 'src/routes/hooks';
 import { RouterLink } from 'src/routes/components';
@@ -107,28 +99,28 @@ export default function Nav({ openNav, onCloseNav }) {
     </Box>
   );
 
-const renderContent = (
-  <Scrollbar
-    sx={{
-      height: 1,
-      '& .simplebar-content': {
+  const renderContent = (
+    <Scrollbar
+      sx={{
         height: 1,
-        display: 'flex',
-        flexDirection: 'column',
-      },
-    }}
-  >
-    <Logo sx={{ mt: 3, ml: 4 }} />
+        '& .simplebar-content': {
+          height: 1,
+          display: 'flex',
+          flexDirection: 'column',
+        },
+      }}
+    >
+      <Logo sx={{ mt: 3, ml: 4 }} />
 
-    {renderAccount}
+      {renderAccount}
 
-    {renderMenu}
+      {renderMenu}
 
-    <Box sx={{ flexGrow: 1 }} />
+      <Box sx={{ flexGrow: 1 }} />
 
-    {renderUpgrade}
-  </Scrollbar>
-);
+      {renderUpgrade}
+    </Scrollbar>
+  );
 
   return (
     <Box
@@ -176,16 +168,10 @@ function NavItem({ item }) {
   const pathname = usePathname();
 
   const active = item.path === pathname;
-  const [open, setOpen] = useState(true);
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
 
   return (
     <ListItemButton
       component={RouterLink}
-      onClick={handleClick}
       href={item.path}
       sx={{
         minHeight: 44,
@@ -209,49 +195,7 @@ function NavItem({ item }) {
       </Box>
 
       <Box component="span">{item.title} </Box>
-      {item.subItems && (
-          <IconButton
-            sx={{
-              ml: 'auto',
-              color: 'text.secondary',
-            }}
-          >
-            {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-          </IconButton>
-        )}
     </ListItemButton>
-
- {item.subItems && (
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            {item.subItems.map((subItem) => (
-              <ListItem
-                key={subItem.title}
-                disablePadding
-                sx={{
-                  minHeight: 44,
-                  borderRadius: 0.75,
-                  typography: 'body2',
-                  color: 'text.secondary',
-                  textTransform: 'capitalize',
-                  fontWeight: 'fontWeightMedium',
-                  // ... (other styles for sub-items)
-                }}
-              >
-                <ListItemButton
-                  component={RouterLink}
-                  href={subItem.path}
-                  sx={{
-                    pl: 4,
-                  }}
-                >
-                  {subItem.title}
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-        </Collapse>
-      )}
   );
 }
 
