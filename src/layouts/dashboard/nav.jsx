@@ -177,6 +177,7 @@ function NavItem({ item }) {
   return (
     <ListItemButton
       component={RouterLink}
+      onClick={handleClick}
       href={item.path}
       sx={{
         minHeight: 44,
