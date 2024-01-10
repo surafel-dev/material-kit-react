@@ -35,6 +35,7 @@ const navConfig = [
         title: 'List 1',
         path: '/products',
       },
+    ],
   },
   {
     title: 'login',
