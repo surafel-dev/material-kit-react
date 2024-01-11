@@ -9,6 +9,13 @@ import Avatar from '@mui/material/Avatar';
 import { alpha } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import ListItemButton from '@mui/material/ListItemButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
+
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
 
 import { usePathname } from 'src/routes/hooks';
 import { RouterLink } from 'src/routes/components';
@@ -178,6 +185,7 @@ function NavItem({ item }) {
   return (
     <ListItemButton
       component={RouterLink}
+      onClick={handleClick}
       href={item.path}
       sx={{
         minHeight: 44,
@@ -201,7 +209,49 @@ function NavItem({ item }) {
       </Box>
 
       <Box component="span">{item.title} </Box>
+       {item.subItems && (
+          <IconButton
+            sx={{
+              ml: 'auto',
+              color: 'text.secondary',
+            }}
+          >
+            {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          </IconButton>
+        )}
     </ListItemButton>
+
+   {item.subItems && (
+        <Collapse in={open} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            {item.subItems.map((subItem) => (
+              <ListItem
+                key={subItem.title}
+                disablePadding
+                sx={{
+                  minHeight: 44,
+                  borderRadius: 0.75,
+                  typography: 'body2',
+                  color: 'text.secondary',
+                  textTransform: 'capitalize',
+                  fontWeight: 'fontWeightMedium',
+                  // ... (other styles for sub-items)
+                }}
+              >
+                <ListItemButton
+                  component={RouterLink}
+                  href={subItem.path}
+                  sx={{
+                    pl: 4,
+                  }}
+                >
+                  {subItem.title}
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Collapse>
+      )}
   );
 }
 
