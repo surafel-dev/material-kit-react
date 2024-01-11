@@ -14,8 +14,8 @@ import ListItem from '@mui/material/ListItem';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { usePathname } from 'src/routes/hooks';
 import { RouterLink } from 'src/routes/components';
