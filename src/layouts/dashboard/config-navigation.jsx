@@ -59,6 +59,22 @@ const navConfig = [
       },
     ],
   },
+ {
+   title: 'Libary Management',
+   icon: icon('ic_blog'),
+   subItems: [
+      {
+        title: 'Libary Inventory',
+        path: '/products',
+        icon: icon('ic_blog'),
+      },
+      {
+        title: 'Lended books',
+        path: '/products',
+        icon: icon('ic_blog'),
+      },
+    ],
+  },
   {
     title: 'login',
     path: '/login',
