@@ -28,12 +28,18 @@ const navConfig = [
     icon: icon('ic_blog'),
   },
   {
-   title: 'Nested list',
+   title: 'Student Management',
    icon: icon('ic_blog'),
    subItems: [
       {
-        title: 'List 1',
+        title: 'Student information',
         path: '/products',
+        icon: icon('ic_blog'),
+      },
+      {
+        title: 'Displien record ',
+        path: '/products',
+        icon: icon('ic_blog'),
       },
     ],
   },
