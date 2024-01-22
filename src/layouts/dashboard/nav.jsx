@@ -246,10 +246,10 @@ function NavItem({ item }) {
                   }}
                 >
                  <Box component="span" sx={{ width: 24,                   height: 24, mr: 2 }}>
-        {subItem.icon}
+        {subItems.icon}
       </Box>
 
-      <Box component="span">{subItem.title} </Box>
+      <Box component="span">{subItems.title} </Box>
                   
                 </ListItemButton>
               </ListItem>
