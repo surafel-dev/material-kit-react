@@ -43,6 +43,22 @@ const navConfig = [
       },
     ],
   },
+   {
+   title: 'Employee Management',
+   icon: icon('ic_blog'),
+   subItems: [
+      {
+        title: 'Employee Attendance',
+        path: '/products',
+        icon: icon('ic_blog'),
+      },
+      {
+        title: 'Employee Information',
+        path: '/products',
+        icon: icon('ic_blog'),
+      },
+    ],
+  },
   {
     title: 'login',
     path: '/login',
