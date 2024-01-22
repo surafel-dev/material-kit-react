@@ -182,7 +182,7 @@ function NavItem({ item }) {
   };
 
   return (
-    <React.Fragment>
+    <>
     <ListItemButton
       component={RouterLink}
       onClick={handleClick}
@@ -252,7 +252,7 @@ function NavItem({ item }) {
           </List>
         </Collapse>
       )}
-   </React.Fragment>
+   </>
   );
 }
 
