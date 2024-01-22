@@ -216,7 +216,7 @@ function NavItem({ item }) {
               color: 'text.secondary',
             }}
           >
-            {open ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+            {open ? <ExpandLess /> : <ExpandMore />}
           </IconButton>
         )}
     </ListItemButton>
