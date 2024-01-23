@@ -1,4 +1,4 @@
-import SvgColor from 'src/components/svg-color';
+imported SvgColor from 'src/components/svg-color';
 
 // ----------------------------------------------------------------------
 
@@ -26,34 +26,6 @@ const navConfig = [
     title: 'blog',
     path: '/blog',
     icon: icon('ic_blog'),
-  },
-  {
-   title: 'Student Management',
-   icon: icon('ic_blog'),
-   subItems: [
-      {
-        title: 'Student information',
-        icon: icon('ic_blog'),
-      },
-      {
-        title: 'Displien record ',
-        icon: icon('ic_blog'),
-      },
-    ],
-  },
-  {
-   title: 'Employee Management',
-   icon: icon('ic_blog'),
-    subItems: [
-      {
-        title: 'Employee information',
-        icon: icon('ic_blog'),
-      },
-      {
-        title: 'Employee record ',
-        icon: icon('ic_blog'),
-      },
-    ],
   },
   {
     title: 'login',
