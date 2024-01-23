@@ -33,12 +33,10 @@ const navConfig = [
    subItems: [
       {
         title: 'Student information',
-        path: '/products',
         icon: icon('ic_blog'),
       },
       {
         title: 'Displien record ',
-        path: '/products',
         icon: icon('ic_blog'),
       },
     ],
