@@ -1,4 +1,4 @@
-imported SvgColor from 'src/components/svg-color';
+import SvgColor from 'src/components/svg-color';
 
 // ----------------------------------------------------------------------
 
