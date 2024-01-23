@@ -26,6 +26,34 @@ const navConfig = [
       },
     ],
   },
+    {
+    title: 'Employee management',
+    icon: icon('ic_analytics'),
+    subItems: [
+      {
+        title: 'Category 1',
+        icon: icon('ic_analytics'),
+      },
+      {
+        title: 'Category 2',
+        icon: icon('ic_analytics'),
+      },
+    ],
+  },
+    {
+    title: 'Library management',
+    icon: icon('ic_analytics'),
+    subItems: [
+      {
+        title: 'Category 1',
+        icon: icon('ic_analytics'),
+      },
+      {
+        title: 'Category 2',
+        icon: icon('ic_analytics'),
+      },
+    ],
+  },
   {
     title: 'user',
     path: '/user',
