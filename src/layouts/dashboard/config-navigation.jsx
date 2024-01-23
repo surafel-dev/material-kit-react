@@ -46,18 +46,6 @@ const navConfig = [
   {
    title: 'Employee Management',
    icon: icon('ic_blog'),
-   subItems: [
-      {
-        title: 'Employee information',
-        path: '/products',
-        icon: icon('ic_blog'),
-      },
-      {
-        title: 'Displien record ',
-        path: '/products',
-        icon: icon('ic_blog'),
-      },
-    ],
   },
   {
     title: 'login',
