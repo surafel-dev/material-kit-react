@@ -17,11 +17,19 @@ const navConfig = [
     icon: icon('ic_analytics'),
     subItems: [
       {
-        title: 'Category 1',
+        title: Student information',
         icon: icon('ic_analytics'),
       },
       {
-        title: 'Category 2',
+        title: 'Attendance',
+        icon: icon('ic_analytics'),
+      },
+      {
+        title: 'Academic performance',
+        icon: icon('ic_analytics'),
+      },
+      {
+        title: 'Behavioural records',
         icon: icon('ic_analytics'),
       },
     ],
