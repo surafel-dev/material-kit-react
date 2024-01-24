@@ -53,11 +53,19 @@ const navConfig = [
     icon: icon('ic_analytics'),
     subItems: [
       {
-        title: 'Category 1',
+        title: 'Book catalog',
         icon: icon('ic_analytics'),
       },
       {
-        title: 'Category 2',
+        title: 'Library inventory',
+        icon: icon('ic_analytics'),
+      },
+      {
+        title: 'Report & Analytics',
+        icon: icon('ic_analytics'),
+      },
+      {
+        title: 'History',
         icon: icon('ic_analytics'),
       },
     ],
