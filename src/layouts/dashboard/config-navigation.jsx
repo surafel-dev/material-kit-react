@@ -29,7 +29,7 @@ const navConfig = [
         icon: icon('ic_analytics'),
       },
       {
-        title: 'Behavioural records',
+        title: 'Disciplinary records',
         icon: icon('ic_analytics'),
       },
     ],
@@ -39,11 +39,23 @@ const navConfig = [
     icon: icon('ic_analytics'),
     subItems: [
       {
-        title: 'Category 1',
+        title: ' Employee information',
         icon: icon('ic_analytics'),
       },
       {
-        title: 'Category 2',
+        title: 'Attendance',
+        icon: icon('ic_analytics'),
+      },
+      {
+        title: 'Salary management',
+        icon: icon('ic_analytics'),
+      },
+      {
+        title: 'Performance review',
+        icon: icon('ic_analytics'),
+      },
+      {
+        title: 'Disciplinary records',
         icon: icon('ic_analytics'),
       },
     ],
