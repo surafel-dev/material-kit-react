@@ -17,7 +17,7 @@ const navConfig = [
     icon: icon('ic_analytics'),
     subItems: [
       {
-        title: Student information',
+        title: 'Student information',
         icon: icon('ic_analytics'),
       },
       {
