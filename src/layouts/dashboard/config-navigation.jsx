@@ -18,7 +18,7 @@ const navConfig = [
     subItems: [
       {
         title: 'Student information',
-            path: '/student',
+        path: '/student',
         icon: icon('ic_analytics'),
       },
       {
