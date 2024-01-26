@@ -10,10 +10,10 @@ export default function formDialog(props) {
      return (
               <Dialog>
                 <DialogTitle>
-                  {title}
+                  title
                 </DialogTitle>
                 <DialogContent>
-                  {children}
+                  children
                 </DialogContent>
               </Dialog>
 );
