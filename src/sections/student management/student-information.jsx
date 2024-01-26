@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 
 import Iconify from 'src/components/iconify';
-import { formDialog } from 'src/layouts/dashboard/common/from-dialog';
+import formDialog from 'src/layouts/dashboard/common/from-dialog';
 
 export default function studentInformation() {
 
