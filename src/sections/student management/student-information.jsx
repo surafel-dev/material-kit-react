@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 import Iconify from 'src/components/iconify';
-import {formDialog} from 'src/layouts/dashboard/common/form-dialog';
+import formDialog from 'src/layouts/dashboard/common/form-dialog';
 
 export default function studentInformation() {
 
