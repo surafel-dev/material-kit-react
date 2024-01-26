@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 
 import Iconify from 'src/components/iconify';
 import {formDialog} from 'src/layouts/dashboard/common/form-dialog';
