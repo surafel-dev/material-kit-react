@@ -4,7 +4,7 @@ import { ProductsView } from 'src/sections/products/view';
 
 // ----------------------------------------------------------------------
 
-export default function ProductsPage() {
+export default function StudentInfoPage() {
   return (
     <>
       <Helmet>
