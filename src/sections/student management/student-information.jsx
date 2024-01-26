@@ -18,7 +18,7 @@ export default function studentInformation() {
         <Typography variant="h4">Users</Typography>
 
         <Button variant="contained" color="inherit" startIcon={<Iconify icon="eva:plus-fill" />} onClick={() => setOpenDialog(true)}>
-          New User
+          New student
         </Button>
       </Stack>
       
