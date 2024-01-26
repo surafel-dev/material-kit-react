@@ -21,13 +21,14 @@ export default function studentInformation() {
           New User
         </Button>
       </Stack>
-        </Container>
-
+      
        <formDialog
          openDialog = {openDialog}
          setOpenDialog = {setOpenDialog}
-        
+
         />
+
+        </Container>
 );
 
 };
