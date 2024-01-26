@@ -8,7 +8,7 @@ export default function formDialog(props) {
        const { title, children, openDialog, setOpenDialog } = props;
  
      return (
-              <Dialog>
+              <Dialog open={openDialog}>
                 <DialogTitle>
                   title
                 </DialogTitle>
