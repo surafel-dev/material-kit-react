@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-import { ProductsView } from 'src/sections/products/view';
+import { studentInformation } from 'src/sections/student management';
 
 // ----------------------------------------------------------------------
 
@@ -11,7 +11,7 @@ export default function StudentInfoPage() {
         <title> Student information </title>
       </Helmet>
 
-      <ProductsView />
+      <studentInformation />
     </>
   );
 }
