@@ -1,0 +1,1 @@
+export { default as studentInfo } from './student-information';
