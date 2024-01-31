@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-import { studentInformation } from 'src/sections/student management';
+import { StudentInformation } from 'src/sections/student management';
 
 // ----------------------------------------------------------------------
 
@@ -11,7 +11,7 @@ export default function StudentInfoPage() {
         <title> Student information </title>
       </Helmet>
 
-      <studentInformation />
+      <StudentInformation />
     </>
   );
 }
