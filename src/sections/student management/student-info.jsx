@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Iconify from 'src/components/iconify';
 import formDialog from 'src/layouts/dashboard/common/form-dialog';
 
-export default function studentInformation() {
+export default function StudentInformation() {
 
 
 
