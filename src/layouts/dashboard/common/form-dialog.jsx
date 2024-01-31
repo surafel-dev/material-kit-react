@@ -16,7 +16,8 @@ export default function FormDialog(props) {
                   children
                 </DialogContent>
               </Dialog>
-);
+  );
+
 };
 
  FormDialog.propTypes = {
