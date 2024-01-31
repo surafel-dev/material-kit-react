@@ -3,7 +3,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 
 
-export default function formDialog(props) {
+export default function FormDialog(props) {
        
        const { title, children, openDialog, setOpenDialog } = props;
  
