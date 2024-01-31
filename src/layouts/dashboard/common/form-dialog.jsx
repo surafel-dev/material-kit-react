@@ -17,5 +17,11 @@ export default function FormDialog(props) {
                 </DialogContent>
               </Dialog>
 );
+};
 
+ FormDialog.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  openDialog: PropTypes.bool.isRequired,
+  setOpenDialog: PropTypes.func.isRequired,
 };
