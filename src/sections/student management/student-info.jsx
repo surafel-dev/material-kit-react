@@ -5,9 +5,11 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 import Iconify from 'src/components/iconify';
-import formDialog from 'src/layouts/dashboard/common/form-dialog';
+import FormDialog from 'src/layouts/dashboard/common/form-dialog';
 
 export default function StudentInformation() {
+        
+       const [openDialog, setOpenDialog] = useState(false);
 
 
 
@@ -21,6 +23,13 @@ export default function StudentInformation() {
           New student
         </Button>
       </Stack>
+
+    <FormDialog 
+      openDialog={openDialog}
+      setOpenDialog={setOpenDialog}
+      />
+
+    
 
         </Container>
 );
