@@ -1,1 +1,1 @@
-export { default as studentInformation } from './student-information';
+export { default as studentInformation } from './student-info';
