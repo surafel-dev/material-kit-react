@@ -81,8 +81,9 @@ export default function UserTableRow({
         }}
       >
         <MenuItem onClick={handleCloseMenu}>
-          <Iconify icon="eva:edit-fill" sx={{ mr: 2 }} />
-          Edit
+          <Button variant="outlined" startIcon={<EditAttributesIcon />}>
+  Edit
+</Button>
         </MenuItem>
 
         <MenuItem onClick={handleCloseMenu} sx={{ color: 'error.main' }}>
